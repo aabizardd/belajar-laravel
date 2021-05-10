@@ -15,7 +15,9 @@
 
     <body>
 
-        @yield('content');
+        @include('template.v_nav')
+
+        @yield('content')
 
 
         <!-- Optional JavaScript; choose one of the two! -->

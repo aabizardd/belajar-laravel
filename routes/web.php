@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MahasiswaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Route::get('/', function () {
-    return view('v_home');
-});
+Route::get('/', [MahasiswaController::class, 'index'])->name('home');
+// Route::get('/home', [MahasiswaController::class, 'index']);
+Route::get('/home/delete/{id}', [MahasiswaController::class, 'delete']);
